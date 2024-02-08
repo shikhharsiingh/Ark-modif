@@ -1,0 +1,55 @@
+
+=====================================================================
+This module is intended solely for building or source activating user
+python environments, i.e.,
+
+    mamba create -n myenv -c conda-forge
+
+or
+
+    source activate myenv
+
+To list available environments, run:
+
+    mamba info --envs
+
+See our docs: https://links.asu.edu/solpy
+
+Any other use is NOT TESTED.
+=====================================================================
+
+  
+/var/spool/slurmd/job11950744/slurm_script: line 17: cd: /scratch/ssiingh/CSE507/classification/models/Ark: No such file or directory
+/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /opt/conda/conda-bld/pytorch_1670525552843/work/aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Traceback (most recent call last):
+  File "/scratch/ssiingh/JLiangLab/Ark/main_ark.py", line 142, in <module>
+    main(args)
+  File "/scratch/ssiingh/JLiangLab/Ark/main_ark.py", line 138, in main
+    ark_engine(args, model_path, output_path, args.dataset_list, datasets_config, dataset_train_list, dataset_val_list, dataset_test_list)
+  File "/scratch/ssiingh/JLiangLab/Ark/engine.py", line 201, in ark_engine
+    train_one_epoch(
+  File "/scratch/ssiingh/JLiangLab/Ark/trainer.py", line 22, in train_one_epoch
+    for i, (samples1, samples2, targets) in enumerate(data_loader_train):
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1333, in _next_data
+    return self._process_data(data)
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1359, in _process_data
+    data.reraise()
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/_utils.py", line 543, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 302, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/scratch/ssiingh/JLiangLab/Ark/dataloader.py", line 549, in __getitem__
+    imageData = Image.open(imagePath).convert("RGB")
+  File "/home/ssiingh/.conda/envs/ark/lib/python3.10/site-packages/PIL/Image.py", line 3218, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/ssiingh/CSE507/classification/datasets/mimic-cxr-jpg/files/p17/p17613803/s52017732/2316d5ba-bd793813-211ff841-7b6eb2f8-aecf10ec.jpg'
+
