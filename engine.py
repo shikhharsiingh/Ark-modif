@@ -156,7 +156,13 @@ def ark_engine(
             #         if k.startswith('omni_heads.'):
             #             print(f"Removing key {k} from pretrained checkpoint")
             #             del state_dict[k]
-
+            if "swinv2" in args.model_name:
+                state_dict = {
+                    k.replace("module.", ""): v for k, v in state_dict.items()
+                }
+                teacher_state_dict = {
+                    k.replace("module.", ""): v for k, v in teacher_state_dict.items()
+                }
             model.load_state_dict(state_dict, strict=True)
             teacher.load_state_dict(teacher_state_dict, strict=True)
             lr_scheduler.load_state_dict(checkpoint["scheduler"])

@@ -1,0 +1,36 @@
+{'GPU': None, 'model_name': 'swinv2_large', 'init': 'imagenet', 'pretrained_weights': 'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth', 'from_checkpoint': False, 'dataset_list': ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen'], 'normalization': 'imagenet', 'img_size': 256, 'img_depth': 3, 'batch_size': 200, 'epochs': 200, 'exp_name': '', 'ema_mode': 'epoch', 'momentum_teacher': 0.9, 'pretrain_epochs': 200, 'test_epoch': 10, 'val_loss_metric': 'average', 'projector_features': 1376, 'use_mlp': False, 'opt': 'sgd', 'opt_eps': 1e-08, 'opt_betas': None, 'clip_grad': None, 'momentum': 0.9, 'weight_decay': 0.0, 'sched': 'cosine', 'lr': 0.3, 'lr_noise': None, 'lr_noise_pct': 0.67, 'lr_noise_std': 1.0, 'warmup_lr': 1e-06, 'min_lr': 1e-05, 'decay_epochs': 30, 'warmup_epochs': 20, 'cooldown_epochs': 10, 'decay_rate': 0.5, 'patience_epochs': 10, 'resume': False, 'workers': 16, 'print_freq': 50, 'test_augment': True, 'anno_percent': 100, 'device': 'cuda', 'activate': 'Sigmoid', 'uncertain_label': 'LSR-Ones', 'unknown_label': 0}Epoch 0000: avg_val_loss = 0.66549 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.6352622435069809, 0.6604767742320004, 0.624365688582382, 0.6910752983235601, 0.6859960436820984, 0.695774257183075]
+{'GPU': None, 'model_name': 'swinv2_large', 'init': 'imagenet', 'pretrained_weights': 'https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth', 'from_checkpoint': False, 'dataset_list': ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen'], 'normalization': 'imagenet', 'img_size': 256, 'img_depth': 3, 'batch_size': 200, 'epochs': 200, 'exp_name': '', 'ema_mode': 'epoch', 'momentum_teacher': 0.9, 'pretrain_epochs': 200, 'test_epoch': 10, 'val_loss_metric': 'average', 'projector_features': 1376, 'use_mlp': False, 'opt': 'sgd', 'opt_eps': 1e-08, 'opt_betas': None, 'clip_grad': None, 'momentum': 0.9, 'weight_decay': 0.0, 'sched': 'cosine', 'lr': 0.3, 'lr_noise': None, 'lr_noise_pct': 0.67, 'lr_noise_std': 1.0, 'warmup_lr': 1e-06, 'min_lr': 1e-05, 'decay_epochs': 30, 'warmup_epochs': 20, 'cooldown_epochs': 10, 'decay_rate': 0.5, 'patience_epochs': 10, 'resume': False, 'workers': 16, 'print_freq': 50, 'test_augment': True, 'anno_percent': 100, 'device': 'cuda', 'activate': 'Sigmoid', 'uncertain_label': 'LSR-Ones', 'unknown_label': 0}Epoch 0000: avg_val_loss = 0.67974 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.6394502797958963, 0.6639493591765053, 0.6859524029091432, 0.7087995125286615, 0.6784259994824727, 0.7018910050392151]
+Epoch 0001: avg_val_loss = 0.48348 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.40419405520420654, 0.39108800225787693, 0.20713493517157097, 0.4181094594410996, 0.2296273762981097, 1.2507340908050537]
+Epoch 0002: avg_val_loss = 0.56907 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.5110673681225357, 0.530281812716753, 0.4290400024741367, 0.6515837796588442, 0.532792870203654, 0.7596688866615295]
+Epoch 0003: avg_val_loss = 0.54207 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.42694672996963556, 0.49865219124362, 0.37119126891902715, 0.7046278590586648, 0.44811824560165403, 0.8028777837753296]
+Epoch 0004: avg_val_loss = 0.47847 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.3783428991311213, 0.49092693461312187, 0.31459002960719173, 0.6248777526528088, 0.3644754409790039, 0.6976204514503479]
+Epoch 0005: avg_val_loss = 0.46880 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.3539415833564237, 0.46753388337599927, 0.3035027860765835, 0.6306672300865401, 0.38560189406077067, 0.6715630292892456]
+Epoch 0006: avg_val_loss = 0.55174 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.3911879539728882, 0.47677842546731997, 0.30955425785177315, 0.6443567240416114, 0.39167492389678954, 1.0968834161758423]
+Epoch 0007: avg_val_loss = 1.48183 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [2.124342180741188, 1.1287030022368472, 1.4705308802928236, 1.1781529294910715, 2.252014462153117, 0.7372646927833557]
+Epoch 0008: avg_val_loss = 0.58441 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.49983668438928336, 0.5858698431243244, 0.4981055405154383, 0.6569865381539758, 0.5127590258916219, 0.7528807520866394]
+Epoch 0009: avg_val_loss = 0.45043 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.40458085527192067, 0.49065763191280204, 0.16427381110221115, 0.6202913051220909, 0.32718061407407123, 0.6955930590629578]
+Epoch 0010: avg_val_loss = 0.44933 
+     Datasets  : ['MIMIC', 'CheXpert', 'ChestXray14', 'RSNAPneumonia', 'VinDrCXR', 'Shenzhen']
+     Val Losses: [0.39313316712886426, 0.4932392443347181, 0.16162356243063797, 0.6297739842044774, 0.32575608094533287, 0.6924336552619934]
