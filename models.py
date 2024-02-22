@@ -261,7 +261,7 @@ def build_omni_model(args, num_classes_list):
     elif args.model_name == "swinv2_large":
         model = ArkSwinTransformerV2(
             num_classes_list,
-            model_name="swinv2_large_window12to16_192to256",
+            model_name="swinv2_large_window12to24_192to384",
             projector_features=args.projector_features,
             use_mlp=args.use_mlp,
         )
